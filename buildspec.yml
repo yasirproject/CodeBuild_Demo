@@ -13,6 +13,8 @@ phases:
      #- sh ./build_scripts/create_configuration.sh 
       - npm install
       - aws --version
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region 
   build:
     commands:
       - echo Build started on `date`
