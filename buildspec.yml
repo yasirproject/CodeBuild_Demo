@@ -14,7 +14,8 @@ phases:
       - npm install
       - aws --version
       - echo Logging in to Amazon ECR...
-      - $(aws ecr get-login --no-include-email --region 
+      - $(aws ecr get-login --region us-east-1 --no-include-email)
+      - REPOSITORY_URI=678878256416.dkr.ecr.us-east-1.amazonaws.com/cicd-yasir
   build:
     commands:
       - echo Build started on `date`
